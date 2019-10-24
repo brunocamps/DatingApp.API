@@ -15,6 +15,7 @@ namespace DatingApp.API.Controllers
         //actions inside the controller
         //Purpose: REST API. 
         // GET api/values
+        //synchronous first
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
