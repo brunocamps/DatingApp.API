@@ -27,7 +27,7 @@ namespace DatingApp.API
         public void ConfigureServices(IServiceCollection services) //configure services method. Dependency injection
         {
             //available to the injective and any other part of the application
-            services.AddDbContext<DataContext>(x => x.UseSqlite("Connectionstring")); //install sqlite
+            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))); //install sqlite
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
