@@ -29,9 +29,12 @@ namespace DatingApp.API
             //available to the injective and any other part of the application
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))); //install sqlite
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors(); //make CORS available to use its middleware
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+
+
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -44,6 +47,7 @@ namespace DatingApp.API
             }
 
             //app.UseHttpsRedirection();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseMvc(); //Middleware: routes requests to correct controller. 
             //Middleware: connects. Sits between client requests' and our API endpoint.
             //Router the request to the particular controller.
