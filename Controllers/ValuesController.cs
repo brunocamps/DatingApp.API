@@ -11,8 +11,8 @@ namespace DatingApp.API.Controllers
    // [A]
    // Route: http://localhost:5000/api/values
     [Route("api/[controller]")] //Route
-    [ApiController]
-    public class ValuesController : ControllerBase
+    [ApiController] //
+    public class ValuesController : ControllerBase //view support comes frm angular app
     {
         private readonly DataContext _context;
 
