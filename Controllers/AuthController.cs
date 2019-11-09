@@ -22,7 +22,7 @@ namespace DatingApp.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
-            //validate request
+            //validate request -> already through [APIController]
 
             //convert to lowercase
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
