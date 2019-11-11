@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DatingApp.API.Models.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DatingApp.API.Controllers
 {
    // [A]
    // Route: http://localhost:5000/api/values
+    [Authorize] //everything inside must be an authorized request
     [Route("api/[controller]")] //Route
     [ApiController] //
     public class ValuesController : ControllerBase //view support comes frm angular app
@@ -33,6 +35,7 @@ namespace DatingApp.API.Controllers
         }
 
         // GET api/values/5
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValue(int id)
         {
