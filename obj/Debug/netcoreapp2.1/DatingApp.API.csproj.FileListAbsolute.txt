@@ -36,3 +36,4 @@ C:\Users\bruno\Documents\GitHub\DatingApp.API\bin\Debug\netcoreapp2.1\DatingApp-
 C:\Users\bruno\Documents\GitHub\DatingApp.API\bin\Debug\netcoreapp2.1\DatingApp-SPA\tsconfig.json
 C:\Users\bruno\Documents\GitHub\DatingApp.API\bin\Debug\netcoreapp2.1\DatingApp-SPA\tsconfig.spec.json
 C:\Users\bruno\Documents\GitHub\DatingApp.API\bin\Debug\netcoreapp2.1\DatingApp-SPA\tslint.json
+C:\Users\bruno\Documents\GitHub\DatingApp.API\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
