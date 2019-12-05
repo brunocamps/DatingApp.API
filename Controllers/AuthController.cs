@@ -52,9 +52,12 @@ namespace DatingApp.API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(UserForRegisterDto userForLoginDto)
+        public async Task<IActionResult> Login(UserForRegisterDto userForLoginDto) //Login Method
         {
-            //1. Checks if the username and pwd matches the one in the db
+
+            
+                //throw new Exception("Computer says no!");
+                //1. Checks if the username and pwd matches the one in the db
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
 
@@ -96,10 +99,7 @@ namespace DatingApp.API.Controllers
                 token = tokenHandler.WriteToken(token)
 
             });
-            //14:48
-
-
-
+            
 
         }
 
