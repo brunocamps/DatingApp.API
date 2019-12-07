@@ -4,26 +4,26 @@
 
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Matches <!---->
+        <a class="nav-link" href="#">App <!---->
            <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lists</a>
+        <a class="nav-link" href="#">Insights</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
+        <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" (click)="logout()" href="#">Logout</a>
       </li>
     </ul>
 
-    <div *ngIf="loggedIn()" class="dropdown">
-      <a class="dropdown-toggle text-light">
-        Welcome user
+    <div *ngIf="loggedIn()" class="dropdown" dropdown>
+      <a class="dropdown-toggle text-light" dropownToggle>
+        Welcome {{authService.decodedToken?.unique_name | titlecase}}
       </a>
     
-      <div class="dropdown-menu">
+      <div class="dropdown-menu" *dropdownMenu>
         <a class="dropdown-item" href="#"><i class="fa fa-user"></i>Edit Profile</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i>Logout</a>
