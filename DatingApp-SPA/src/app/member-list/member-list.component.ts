@@ -12,4 +12,8 @@ export class MemberListComponent implements OnInit {
   ngOnInit() {
   }
 
+  analisar(){
+    
+  }
+
 }
