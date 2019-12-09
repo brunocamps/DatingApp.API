@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SplashScreenExemplo" x:Class="SplashScreenExemplo.MainPage">
+    <StackLayout>
+        <!-- Place new controls here -->
+        <WebView x:Name="mwbv1" Source="http://192.168.100.10:4200/home" VerticalOptions="FillAndExpand"/>
+    </StackLayout>
+</ContentPage>
