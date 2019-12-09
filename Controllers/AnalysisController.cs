@@ -24,7 +24,7 @@ namespace DatingApp.API.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("{id}")]
+        [HttpGet("{phrase}")]
         public async Task<IActionResult> GetAnalysis(string phrase)
         {
             //"BLL" in the controller 
@@ -39,7 +39,7 @@ namespace DatingApp.API.Controllers
             var response = detectSentimentResponse.Sentiment;
 
 
-            return Ok(response);
+            return Ok(response.toString());
         }
     }
 }
