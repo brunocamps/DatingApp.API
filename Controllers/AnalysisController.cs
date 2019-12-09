@@ -35,11 +35,15 @@ namespace DatingApp.API.Controllers
                 LanguageCode = "en"
             };
             DetectSentimentResponse detectSentimentResponse = await comprehendClient.DetectSentimentAsync(detectSentimentRequest);
-            
-            var response = detectSentimentResponse.Sentiment;
 
+            var response = new Sentiment();
+            response.Value = detectSentimentResponse.Sentiment.Value.ToString();
+            response.SentimentScore_mixed = detectSentimentResponse.SentimentScore.Mixed;
+            response.SentimentScore_negative = detectSentimentResponse.SentimentScore.Negative;
+            response.SentimentScore_neutral = detectSentimentResponse.SentimentScore.Neutral;
+            response.SentimentScore_positive = detectSentimentResponse.SentimentScore.Positive;
 
-            return Ok(response.toString());
+            return Ok(response);
         }
     }
 }
